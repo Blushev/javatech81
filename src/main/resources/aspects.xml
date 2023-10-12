@@ -33,8 +33,8 @@
                 expression="execution(* *.logEvent(com.yet.spring.core.beans.Event))
                 &amp;&amp; within(com.yet.spring.core.loggers.ConsoleEventLogger)
                 &amp;&amp; args(evt)" />
-            
-            <aop:around pointcut-ref="consoleLogging" method="aroundLogEvent" arg-names="evt" />
+
+            <aop:around pointcut-ref="consoleLogging" method="aroundLogEvent" arg-names="jp,evt" />
         </aop:aspect>
 
 </aop:config>
